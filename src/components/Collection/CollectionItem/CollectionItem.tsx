@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import React from "react";
+import { motion, Variants } from "framer-motion";
 
 const collectionVariants: Variants = {
   inView: {
@@ -20,5 +20,9 @@ type CollectionItemProps = {
 };
 
 export const CollectionItem: React.FC<CollectionItemProps> = ({ children }) => {
-  return <motion.div variants={collectionVariants}>{children}</motion.div>;
+  return (
+    <motion.div variants={collectionVariants} style={{ height: "100%" }}>
+      {children}
+    </motion.div>
+  );
 };

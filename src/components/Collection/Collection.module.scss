@@ -12,7 +12,7 @@
         column-gap: rem-calc(24);
         row-gap: rem-calc(16);
         flex-shrink: 0;
-        align-items: start;
+        align-items: stretch;
         place-content: start;
 
         &.large {
