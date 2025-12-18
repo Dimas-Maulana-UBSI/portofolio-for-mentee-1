@@ -1,0 +1,10 @@
+.journeyMain {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(60);
+
+  &.mobile {
+    flex-direction: row;
+    gap: rem-calc(22);
+  }
+}

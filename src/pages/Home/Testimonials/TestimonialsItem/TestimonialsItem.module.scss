@@ -1,0 +1,64 @@
+.testimonial {
+  background-color: get-color('background', 1);
+  border-radius: rem-calc(24);
+  padding: rem-calc(20);
+
+  .header {
+    display: flex;
+    gap: rem-calc(16);
+    align-items: center;
+    padding-bottom: rem-calc(20);
+    border-bottom: 1px solid get-color('stroke', 1);
+
+    @include md {
+      gap: rem-calc(20);
+    }
+
+    .profileImage {
+      width: rem-calc(60);
+      height: rem-calc(60);
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 50%;
+      flex-shrink: 0;
+
+      @include md {
+        width: rem-calc(70);
+        height: rem-calc(70);
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .title {
+        @include typography('text-lg', 'semibold');
+        color: get-color('neutral', 25);
+
+        @include md {
+          @include typography('text-xl', 'semibold');
+        }
+      }
+
+      .subtitle {
+        @include typography('text-md', 'regular');
+        color: get-color('neutral', 200);
+
+        @include md {
+          @include typography('text-lg', 'regular');
+        }
+      }
+    }
+  }
+  .content {
+    padding-top: rem-calc(20);
+    @include typography('text-sm', 'regular');
+    color: get-color('neutral', 400);
+
+    @include md {
+      @include typography('text-md', 'regular');
+    }
+  }
+}

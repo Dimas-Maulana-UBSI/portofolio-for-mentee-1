@@ -1,0 +1,70 @@
+.journeyTimeline {
+  overflow: hidden;
+  .milestonesYear {
+    display: flex;
+    align-items: center;
+
+    .yearWrapper {
+      flex-shrink: 0;
+
+      .year {
+        @include typography('text-lg', 'medium');
+        color: get-color('neutral', 50);
+        width: fit-content;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  $timelineHeight: rem-calc(8);
+
+  .timeline {
+    margin-top: rem-calc(34);
+    height: $timelineHeight;
+    background-color: get-color('background', 1);
+    border-radius: rem-calc(120);
+    overflow: hidden;
+
+    .timelineProgress {
+      height: 100%;
+      width: 100%;
+      background-color: get-color('brand', 100);
+    }
+  }
+
+  .milestones {
+    margin-top: math.div(-$timelineHeight, 2);
+    display: flex;
+    align-items: center;
+
+    .milestoneWrapper {
+      flex-shrink: 0;
+
+      .milestone {
+        width: rem-calc(24);
+        height: rem-calc(24);
+        border: rem-calc(5) solid get-color('neutral', 50);
+        background-color: get-color('background', 1);
+        border-radius: 50%;
+        left: rem-calc(-12);
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+.verticalTimeline {
+  width: rem-calc(6);
+  // height: rem-calc(1040);
+  // background-color: get-color('background', 1);
+  background-color: get-color('neutral', 900);
+  border-radius: rem-calc(120);
+  overflow: hidden;
+  flex-shrink: 0;
+
+  .timelineProgress {
+    height: 100%;
+    width: 100%;
+    background-color: get-color('brand', 100);
+  }
+}

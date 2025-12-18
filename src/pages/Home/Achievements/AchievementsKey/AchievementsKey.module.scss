@@ -1,0 +1,33 @@
+.achievementKey {
+  flex: 1 0 rem-calc(364);
+  display: flex;
+  align-items: center;
+  gap: rem-calc(16);
+  padding: 0 rem-calc(40);
+  max-width: rem-calc(600);
+  justify-content: center;
+
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+  }
+
+  .keyMetric {
+    color: get-color('neutral', 50);
+    @include typography('display-lg', 'semibold');
+
+    @include md {
+      @include typography('display-xl', 'semibold');
+    }
+  }
+
+  .keyDetail {
+    color: get-color('neutral', 50);
+
+    @include typography('text-sm', 'regular');
+    @include md {
+      @include typography('text-lg', 'regular');
+    }
+  }
+}

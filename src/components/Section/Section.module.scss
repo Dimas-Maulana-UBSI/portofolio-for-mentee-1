@@ -1,0 +1,31 @@
+.overflowWrapper {
+  &.overflowHidden {
+    overflow: hidden; // prevent horizontal scrolling if we have decorations that are wider than the viewport
+  }
+
+  .section {
+    padding-top: rem-calc(120);
+
+    .sectionHeader {
+      padding-bottom: rem-calc(60);
+      text-align: center;
+
+      .title {
+        color: $white;
+        @include typography('display-sm', 'bold');
+        @include md {
+          @include typography('display-md', 'bold');
+        }
+      }
+
+      .subtitle {
+        margin-top: rem-calc(12);
+        color: rgba($white, 0.7);
+        @include typography('text-sm', 'regular');
+        @include md {
+          @include typography('text-lg', 'regular');
+        }
+      }
+    }
+  }
+}

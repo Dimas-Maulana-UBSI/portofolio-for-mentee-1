@@ -1,0 +1,30 @@
+.footer {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem-calc(40);
+    padding: rem-calc(40) rem-calc(24);
+
+    .description {
+      @include typography('text-sm', 'medium');
+      color: get-color('neutral', 700);
+      max-width: rem-calc(502);
+      text-align: center;
+    }
+
+    .socialMedia {
+      display: flex;
+      align-items: center;
+      gap: rem-calc(40);
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid get-color('stroke', 1);
+    padding: rem-calc(20) rem-calc(24);
+    text-align: center;
+    @include typography('text-xs', 'regular');
+    color: get-color('neutral', 600);
+  }
+}

@@ -1,0 +1,79 @@
+.card {
+  width: rem-calc(376);
+  padding: rem-calc(24);
+  border-radius: rem-calc(24);
+  background-color: get-color('background', 1);
+  flex-shrink: 0;
+  overflow: hidden;
+  box-shadow: inset 0 4px 25px rgba(255, 255, 255, 0.1);
+
+  &.mobile {
+    width: 100%;
+    height: rem-calc(331);
+  }
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      width: rem-calc(60);
+      height: rem-calc(60);
+      padding: rem-calc(15);
+      border-radius: 50%;
+      background-color: #1f1f1f; // not in the design system
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > * {
+        width: 100%;
+      }
+    }
+
+    .date {
+      @include typography('text-sm', 'regular');
+      color: get-color('neutral', 200);
+      @include md {
+        @include typography('text-md', 'regular');
+      }
+    }
+  }
+
+  .cardDetails {
+    margin-top: rem-calc(29);
+
+    .title {
+      color: get-color('neutral', 50);
+      @include typography('text-lg', 'semibold');
+
+      @include md {
+        @include typography('text-xl', 'semibold');
+      }
+    }
+
+    .subtitle {
+      margin-top: rem-calc(4);
+      color: get-color('neutral', 200);
+
+      @include typography('text-md', 'regular');
+
+      @include md {
+        @include typography('text-lg', 'regular');
+      }
+    }
+
+    .description {
+      margin-top: rem-calc(16);
+      @include typography('text-sm', 'regular');
+      color: get-color('neutral', 400);
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+    }
+  }
+}

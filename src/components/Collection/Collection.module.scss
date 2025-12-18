@@ -1,0 +1,25 @@
+.wrapper {
+  .container {
+    overflow-x: hidden;
+
+    .collectionPages {
+      display: flex;
+      gap: rem-calc(24);
+
+      .collection {
+        display: grid;
+        grid-template-columns: auto;
+        column-gap: rem-calc(24);
+        row-gap: rem-calc(16);
+        flex-shrink: 0;
+        align-items: start;
+        place-content: start;
+
+        &.large {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: rem-calc(32);
+        }
+      }
+    }
+  }
+}

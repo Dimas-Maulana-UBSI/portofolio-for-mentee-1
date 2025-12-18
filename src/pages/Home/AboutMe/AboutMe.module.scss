@@ -1,0 +1,63 @@
+.aboutMe {
+  margin-top: rem-calc(140);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem-calc(85);
+  row-gap: rem-calc(22);
+
+  .info {
+    flex: 1 0 rem-calc(300);
+    text-align: center;
+
+    @include md {
+      text-align: start;
+    }
+
+    .title {
+      @include typography('display-sm', 'semibold');
+      color: get-color('neutral', 50);
+
+      @include md {
+        @include typography('display-md', 'semibold');
+      }
+    }
+
+    .description {
+      margin-top: rem-calc(16);
+      @include typography('text-sm', 'regular');
+      color: get-color('neutral', 400);
+
+      @include md {
+        margin-top: rem-calc(24);
+        @include typography('text-lg', 'regular');
+      }
+    }
+  }
+
+  .profileWrapper {
+    flex: 1 0 rem-calc(300);
+    max-width: rem-calc(483);
+    height: calc(442px + (100vw - 398px) * 0.091);
+    .profile {
+      width: 100%;
+      height: 100%;
+      background-image: url('@/assets/png/pattern-dot.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .profileImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+}

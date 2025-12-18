@@ -1,0 +1,37 @@
+.floatingSkill {
+  width: fit-content;
+  border-radius: rem-calc(20);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(rem-calc(5));
+  -webkit-backdrop-filter: blur(rem-calc(5)); /* Safari compatibility */
+  user-select: none;
+
+  padding: rem-calc(4) rem-calc(4) rem-calc(2) rem-calc(4);
+  @include typography('text-xs', 'medium');
+
+  @include sm {
+    padding: rem-calc(6) rem-calc(6) rem-calc(3) rem-calc(6);
+    @include typography('text-sm', 'medium');
+  }
+
+  @include md {
+    padding: rem-calc(8) rem-calc(8) rem-calc(5) rem-calc(8);
+    @include typography('text-sm', 'semibold');
+  }
+
+  @include lg {
+    padding: rem-calc(8) rem-calc(8) rem-calc(5) rem-calc(8);
+    @include typography('text-xl', 'semibold');
+  }
+
+  .innerWrapper {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: rem-calc(24);
+    width: fit-content;
+    padding: rem-calc(6) rem-calc(10) rem-calc(8) rem-calc(10);
+    @include md {
+      padding: rem-calc(12) rem-calc(20) rem-calc(18) rem-calc(20);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.navigation {
+  display: none;
+
+  @include lg {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li {
+      padding: 0 rem-calc(20);
+
+      a {
+        @include typography('text-xs', 'regular');
+        color: get-color('neutral', 500);
+
+        &:hover {
+          color: get-color('neutral', 50);
+        }
+      }
+    }
+  }
+}

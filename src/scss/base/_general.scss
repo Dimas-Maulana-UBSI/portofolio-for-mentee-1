@@ -1,0 +1,23 @@
+@import '../variables';
+@import '../functions';
+@import '../mixins';
+
+:root {
+  font-family: $font-primary;
+  @include typography('text-md', 'regular');
+}
+
+body {
+  background-color: #010101;
+  color: get-color('neutral', 400);
+}
+
+.container {
+  max-width: rem-calc(1178);
+  margin: 0 auto;
+  padding: 0 rem-calc(24);
+}
+
+html {
+  scroll-behavior: smooth;
+}

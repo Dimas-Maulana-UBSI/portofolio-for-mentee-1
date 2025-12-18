@@ -1,0 +1,47 @@
+.skillItem {
+  border-radius: rem-calc(24);
+  padding: rem-calc(20);
+  background-color: get-color('background', 1);
+
+  .title {
+    @include typography('text-xl', 'medium');
+    color: $white;
+  }
+
+  .description {
+    margin-top: rem-calc(16);
+    @include typography('text-sm', 'regular');
+    color: get-color('neutral', 400);
+  }
+
+  .proficiency {
+    padding: rem-calc(8) 0;
+    display: flex;
+    align-items: center;
+    gap: rem-calc(12);
+
+    .bar {
+      flex-grow: 1;
+      margin-top: rem-calc(16);
+      height: rem-calc(12);
+      $barBorderRadius: rem-calc(24);
+      border-radius: $barBorderRadius;
+      overflow: hidden;
+      background-color: get-color('stroke', 1);
+
+      .barContent {
+        height: 100%;
+        border-radius: $barBorderRadius;
+        background-color: get-color('brand', 400);
+      }
+    }
+
+    .percentage {
+      @include typography('text-sm', 'medium');
+      color: get-color('neutral', 50);
+      width: rem-calc(50);
+      text-align: end;
+      flex-shrink: 0;
+    }
+  }
+}

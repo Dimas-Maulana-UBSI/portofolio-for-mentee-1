@@ -1,0 +1,11 @@
+label {
+  &.required::after {
+    content: '*';
+    color: #ff0000;
+    margin-left: rem-calc(2);
+  }
+}
+
+input {
+  padding: rem-calc(8);
+}

@@ -1,0 +1,16 @@
+.button {
+  height: rem-calc(48);
+  padding: 0 rem-calc(41.5);
+  border-radius: rem-calc(24);
+  color: get-color('neutral', 900);
+  background-color: get-color('brand', 400);
+  @include typography('text-xs', 'semibold');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: get-color('brand', 500);
+  }
+}

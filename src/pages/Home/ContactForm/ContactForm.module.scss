@@ -1,0 +1,63 @@
+.contactForm {
+  background-color: get-color('background', 1);
+  padding: rem-calc(24);
+  border-radius: rem-calc(16);
+  max-width: rem-calc(729);
+  margin: 0 auto;
+
+  @include md {
+    border-radius: rem-calc(24);
+  }
+  .submitButton {
+    margin-top: rem-calc(24);
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.dialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: rem-calc(24);
+}
+
+.dialog {
+  background-color: get-color('background', 1);
+  border: 1px solid get-color('stroke', 1);
+  border-radius: rem-calc(16);
+  max-width: rem-calc(400);
+  width: 100%;
+}
+
+.dialogContent {
+  padding: rem-calc(32);
+  text-align: center;
+}
+
+.dialogTitle {
+  @include typography('text-xl', 'semibold');
+  color: get-color('neutral', 50);
+  margin-bottom: rem-calc(12);
+}
+
+.dialogText {
+  @include typography('text-sm', 'regular');
+  color: get-color('neutral', 500);
+  margin-bottom: rem-calc(24);
+}
+
+.dialogButton {
+  width: 100%;
+  justify-content: center;
+}

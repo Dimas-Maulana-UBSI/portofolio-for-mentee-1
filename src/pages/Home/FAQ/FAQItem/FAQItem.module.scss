@@ -1,0 +1,65 @@
+.faq {
+  background-color: get-color('background', 1);
+  border-radius: rem-calc(16);
+  overflow: hidden;
+
+  @include md {
+    border-radius: rem-calc(24);
+  }
+
+  .faqHeader {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: rem-calc(20);
+
+    @include md {
+      padding: rem-calc(24);
+    }
+
+    .faqIndex {
+      min-width: rem-calc(48);
+      color: get-color('neutral', 600);
+      @include typography('display-sm', 'semibold');
+
+      @include md {
+        min-width: rem-calc(79);
+        @include typography('display-md', 'semibold');
+      }
+    }
+
+    .faqTitle {
+      padding-right: rem-calc(24);
+      color: get-color('neutral', 50);
+      @include typography('text-lg', 'semibold');
+
+      @include md {
+        @include typography('text-xl', 'medium');
+      }
+    }
+
+    .faqIcon {
+      margin-left: auto;
+    }
+  }
+
+  .faqDetail {
+    margin-left: rem-calc(48);
+    color: get-color('neutral', 600);
+    @include typography('text-md', 'regular');
+
+    @include md {
+      margin-left: rem-calc(79);
+      @include typography('text-lg', 'regular');
+    }
+
+    .faqDescription {
+      padding: 0 rem-calc(20) rem-calc(20) rem-calc(20);
+
+      @include md {
+        padding-bottom: 0 rem-calc(24) rem-calc(24) rem-calc(24);
+      }
+    }
+  }
+}

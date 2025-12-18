@@ -1,0 +1,118 @@
+.comparisonCard {
+  flex: 1 0 fit-content;
+  border-radius: rem-calc(24);
+
+  &.primary {
+    background: linear-gradient(to right, #f7c81d 0%, #c59c07 100%);
+  }
+
+  &.secondary {
+    background: get-color('background', 2);
+
+    .cardHeader {
+      .title {
+        color: get-color('neutral', 50);
+      }
+
+      border-bottom: 1px solid get-color('stroke', 2);
+    }
+
+    .cardList {
+      .cardListItem {
+        .listText {
+          color: get-color('neutral', 50);
+        }
+      }
+    }
+  }
+
+  .cardHeader {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: rem-calc(16) rem-calc(24) rem-calc(24) rem-calc(24);
+
+    @include md {
+      padding: rem-calc(30) rem-calc(40) rem-calc(24) rem-calc(40);
+    }
+
+    .profileImage {
+      background-color: $white;
+      width: rem-calc(80);
+      height: rem-calc(80);
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center top;
+
+      @include md {
+        width: rem-calc(100);
+        height: rem-calc(100);
+      }
+    }
+
+    .emptyProfileContainer {
+      margin: 0 auto;
+      border-radius: 50%;
+      background-color: $white;
+      width: rem-calc(80);
+      height: rem-calc(80);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include md {
+        width: rem-calc(100);
+        height: rem-calc(100);
+      }
+    }
+
+    .title {
+      margin-top: rem-calc(24);
+      text-align: center;
+      color: get-color('neutral', 900);
+      @include typography('text-xl', 'semibold');
+
+      @include md {
+        @include typography('display-sm', 'semibold');
+      }
+    }
+  }
+
+  .cardList {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(30);
+
+    padding: rem-calc(24);
+
+    @include md {
+      gap: rem-calc(32);
+      padding: rem-calc(32);
+    }
+
+    .cardListItem {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: rem-calc(8);
+
+      @include md {
+        justify-content: center;
+      }
+
+      .listIcon {
+        flex-shrink: 0;
+      }
+
+      .listText {
+        @include typography('text-lg', 'medium');
+        color: get-color('neutral', 900);
+
+        @include md {
+          @include typography('text-xl', 'medium');
+        }
+      }
+    }
+  }
+}

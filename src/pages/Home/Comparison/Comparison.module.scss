@@ -1,0 +1,9 @@
+.comparison {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem-calc(16);
+
+  @include md {
+    gap: rem-calc(24);
+  }
+}

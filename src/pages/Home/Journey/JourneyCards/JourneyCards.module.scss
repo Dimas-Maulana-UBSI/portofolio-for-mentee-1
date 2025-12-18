@@ -1,0 +1,21 @@
+.outerContainer {
+  overflow-x: hidden;
+  flex-grow: 1; // important since JourneyMain use flex resulting in the children not taking the full width thus resulting in the isDesktop from useCalculationValue to be false
+
+  .cardsInnerContainer {
+    display: flex;
+    gap: rem-calc(24);
+    width: fit-content;
+  }
+
+  &.mobile {
+    height: rem-calc(1041);
+    overflow-y: hidden;
+
+    .cardsInnerContainer {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(24);
+    }
+  }
+}

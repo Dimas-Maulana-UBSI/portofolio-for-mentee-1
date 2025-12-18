@@ -1,0 +1,154 @@
+.overflowWrapper {
+  overflow: hidden;
+  .hero {
+    padding-top: rem-calc(60);
+    position: relative;
+    z-index: 10;
+    background-color: #010101;
+
+    .title {
+      text-align: center;
+      text-transform: uppercase;
+
+      color: get-color('neutral', 50);
+
+      @include typography('display-md', 'bold');
+
+      @include md {
+        @include typography('display-lg', 'bold');
+      }
+
+      @include lg {
+        @include typography('display-2xl', 'bold');
+      }
+    }
+
+    .subtitle {
+      text-align: center;
+      max-width: rem-calc(600);
+      margin: 0 auto;
+      color: #b3b3b3;
+      margin-top: rem-calc(16);
+
+      @include typography('text-sm', 'regular');
+
+      @include md {
+        margin-top: rem-calc(24);
+        @include typography('text-md', 'regular');
+      }
+
+      @include lg {
+        @include typography('text-lg', 'regular');
+      }
+    }
+
+    .heroContent {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 397 / 420;
+      min-height: rem-calc(420);
+      max-height: rem-calc(440);
+
+      @include md {
+        aspect-ratio: 1178 / 652;
+        min-height: rem-calc(420);
+        max-height: rem-calc(652);
+      }
+
+      .heroProfile {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        user-select: none;
+        -webkit-user-drag: none;
+        height: 90%;
+        min-width: rem-calc(246);
+      }
+
+      .skill {
+        position: absolute;
+
+        animation: float 3s ease-in-out infinite;
+
+        @keyframes float {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+
+        &.ts {
+          top: 20%;
+          right: 2%;
+
+          @include sm {
+            right: 19%;
+          }
+        }
+
+        &.js {
+          top: 25%;
+          left: 5%;
+
+          @include sm {
+            left: 19%;
+          }
+        }
+
+        &.react {
+          top: 55%;
+          right: 0%;
+
+          @include sm {
+            right: 14%;
+          }
+        }
+
+        &.motion {
+          top: 61%;
+          left: 0%;
+
+          @include sm {
+            left: 15%;
+          }
+        }
+      }
+
+      .ellipseDecoration {
+        position: absolute;
+        bottom: 0;
+        width: 186%;
+        aspect-ratio: 1 / 0.24;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+
+        background-image: url('@/assets/png/decoration-grid-plane.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: url('@/assets/png/ellipse-blur-effect.png');
+          background-repeat: no-repeat;
+          background-position: center top;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: rem-calc(16);
+
+  @include md {
+    gap: rem-calc(32);
+  }
+}

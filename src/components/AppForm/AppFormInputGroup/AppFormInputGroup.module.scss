@@ -1,0 +1,12 @@
+.inputGroup {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(6);
+  }
+  .errorMessage {
+    margin-top: rem-calc(12);
+    color: #d20000;
+    @include typography('text-sm', 'regular');
+  }
+}

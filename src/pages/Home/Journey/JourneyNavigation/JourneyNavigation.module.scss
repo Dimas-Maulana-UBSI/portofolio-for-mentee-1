@@ -1,0 +1,17 @@
+.journeyNavigation {
+  display: flex;
+  gap: rem-calc(40);
+  justify-content: center;
+  align-items: center;
+
+  .button {
+    width: rem-calc(60);
+    height: rem-calc(60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: rem-calc(1.7) solid get-color('neutral', 800);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

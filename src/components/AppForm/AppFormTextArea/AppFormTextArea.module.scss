@@ -1,0 +1,41 @@
+.inputGroup {
+  label {
+    @include typography('text-sm', 'medium');
+    color: get-color('neutral', 50);
+
+    @include md {
+      @include typography('text-md', 'medium');
+    }
+    // &.required::after {
+    //   content: '*';
+    //   color: #ff0000;
+    //   margin-left: rem-calc(2);
+    // }
+  }
+
+  textarea {
+    resize: none;
+    height: rem-calc(165);
+    margin-top: rem-calc(12);
+    padding: rem-calc(15) rem-calc(24);
+    border-radius: rem-calc(27);
+    background-color: get-color('background', 1);
+    border: 1px solid get-color('stroke', 2);
+    color: get-color('neutral', 50);
+    @include typography('text-sm', 'regular');
+    font-family: 'Outfit', sans-serif;
+
+    &::placeholder {
+      color: get-color('neutral', 800);
+    }
+
+    &:focus {
+      border: 1px solid get-color('neutral', 800);
+      outline: none;
+    }
+
+    // &.error {
+    //   border: 1px solid #d20000;
+    // }
+  }
+}

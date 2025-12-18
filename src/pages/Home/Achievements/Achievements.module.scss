@@ -1,0 +1,12 @@
+.achievements {
+  margin-top: rem-calc(55);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: rem-calc(60);
+
+  @include md {
+    margin-top: rem-calc(84);
+  }
+}
